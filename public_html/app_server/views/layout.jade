@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title   
+    link(rel='stylesheet', href='/bootstrap-3.3.7-dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/bootstrap-3.3.7-dist/css/bootstrap.css.map')
+    link(rel='stylesheet', href='/css/style.css')
+  body(ng-app="app")
+   div
+    .container.main
+        div
+            h1 Exercise Log Application
+        nav.navbar.navbar-default
+            div.container-fluid
+                div.navbar-header
+                    a.navbar-brand(href='#/') Exercise Log
+                ul.nav.navbar-nav
+                    li 
+                      a(href='#/add/') Add
+        div(ng-view ng-cloak)
+            block content
+        footer
+         br
+         br
+         p Jarrod Craven's MEAN Application
+     
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='/bootstrap-3.3.7-dist/js/bootstrap.js')        
+    script(src='/lib/angular.js')
+    script(src='/lib/angular-route.js')
+    script(src='/lib/exercise.min.js')
+    

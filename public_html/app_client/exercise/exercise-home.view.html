@@ -1,0 +1,42 @@
+<h2>Exercise Table</h2>
+
+<div>
+    
+    <h3>Search</h3>
+    <div class="form-group">
+        <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+        <input class="form-control addExeercise" ng-model="searchText">
+    </div>
+    <br />
+    <br /> 
+    <p ng-class="{'msg' : vm.message.length}">{{vm.message}}</p>
+    <p><a href="#/add/">Add New Exercise</a></p>
+    <table class="table table-striped table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Created On</th> 
+                <th>Weight</th>
+                <th>Sets</th>
+            </tr>
+        </thead>    
+        
+        <tr ng-repeat="exercise in vm.exercises | filter:searchText">
+            <td>{{exercise.exerciseName}}</td>
+            
+            <td>{{exercise.exerciseType}}</td>
+            
+            <td>{{exercise.createdOn}}</td>
+            
+            <td>{{exercise.exerciseWeight}}</td>
+            
+            <td>{{exercise.numberSets}}</td>
+            
+            <td><a ng-href="#/update/{{exercise._id}}">Update/View</a></td>
+ 
+            <td><button ng-click="vm.deleteExercise(exercise._id)">Delete</button></td>
+        </tr>
+    </table>
+        
+</div>
