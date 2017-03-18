@@ -1,0 +1,19 @@
+
+Running Application
+
+To Run this application you will need a few things first.  First you will need to download and
+install node on your machine or run the portable version.  I ran my project from netbeans
+because I feel this editor makes it easier to work with node servers.  I installed Node on
+my machine to make it easier to work with while developing.  Instructions on how to install node
+can be found here. http://blog.teamtreehouse.com/install-node-js-npm-windows
+
+Once you have Node installed or the portable version downloaded.  You can do npm install of the packages.json 
+file in the rout of the project.  This will create the node_modules folder where everything that npm install will be 
+placed.
+
+Mongo DB will also be required to run this application and the portable version can be downloaded from. https://www.mongodb.com/ 
+Once you have download you can run the portable version so that the database is running before you run your the applicatinion.
+
+Start the Server
+Run the Command line or if in netbeans run the server_start file with node to start the server for the application.
+Go to localhost:3000 and the site should then come up.
